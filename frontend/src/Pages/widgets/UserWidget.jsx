@@ -58,7 +58,7 @@ const UserWidget =({userId,PicPath})=>{
 
 
     return(
-        <WidgetWrapper>
+        <WidgetWrapper >
 
             <FlexBetween
                 gap="0.5rem"
