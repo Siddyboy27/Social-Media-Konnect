@@ -2,7 +2,6 @@ import React, { useState,useEffect,  } from 'react'
 import Navbar from '../navbar';
 import { Box, Typography, useTheme } from '@mui/material';
 import { useSelector } from 'react-redux';
-import state from 'state';
 import UserWidget from 'Pages/widgets/UserWidget';
 import Friend from 'components/Friend';
 import FriendListWidget from 'Pages/widgets/FriendListWidget';
@@ -13,16 +12,13 @@ const SearchPage=()=> {
 
   const {searchQuery}=useParams();
   const [list,setList]=useState(null);
-  const [user,setUser]=useState(null);
+
   const token=useSelector((state)=>state.token);
   const {PicPath}=useSelector((state)=>state.user);
   const userId=useSelector((state)=>state.user._id);
 
   const {palette}=useTheme();
   const dark=palette.neutral.dark;
-  const medium=palette.neutral.medium;
-  const main=palette.neutral.main;
-  console.log("Done till here");
 
 
   
